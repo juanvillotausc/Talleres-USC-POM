@@ -4,7 +4,7 @@ la Universidad Santiago de Cali semestre 2022B.
 
 ## Instrucciones
 
-Configuracion de ambiente
+Pasos para ejecutar un projecto
 
 - Clone el repositorio en su maquina local.
 - Abra el IDE IntelliJ y seleccion el projecto.
