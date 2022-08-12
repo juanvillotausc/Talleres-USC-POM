@@ -1,5 +1,6 @@
 # Talleres-USC-POM
-Talleres de la materia programacion orientada a moviles . USC
+Talleres de la materia programacion orientada a moviles de 
+la Universidad Santiago de Cali semestre 2022B.
 
 ## Instrucciones
 ```
