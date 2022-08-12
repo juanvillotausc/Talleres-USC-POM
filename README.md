@@ -6,6 +6,6 @@ la Universidad Santiago de Cali semestre 2022B.
 
 Pasos para ejecutar un projecto
 
-- Clone el repositorio en su maquina local.
-- Abra el IDE IntelliJ y seleccion el projecto.
-- Para ejecutar el projecto situese en el IDE y presione Shift + F10.
+- Clonar el repositorio en la maquina local.
+- Abrir el IDE IntelliJ y seleccionar el projecto.
+- Presionar Shift + F10 para ejecutarlo.
