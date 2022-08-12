@@ -6,10 +6,6 @@ la Universidad Santiago de Cali semestre 2022B.
 
 Configuracion de ambiente
 
-- Clone el repositorio en su maquina local
-- Abra el IDE IntelliJ y seleccion el projecto
-  
-Para ejecutar el projecto situese en el IDE y presione
-```
-> Shitf+F10
-```
+- Clone el repositorio en su maquina local.
+- Abra el IDE IntelliJ y seleccion el projecto.
+- Para ejecutar el projecto situese en el IDE y presione Shift + F10.
