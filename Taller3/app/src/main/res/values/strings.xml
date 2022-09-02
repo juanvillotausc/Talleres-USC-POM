@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalculatorV2</string>
+    <string name="suma">+</string>
 </resources>
