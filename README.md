@@ -9,3 +9,5 @@ Pasos para ejecutar un projecto
 - Clonar el repositorio en la maquina local.
 - Abrir el IDE IntelliJ y seleccionar el projecto.
 - Presionar Shift + F10 para ejecutarlo.
+
+PD: Hacer lo mismo para proyectos con android studio. =]
