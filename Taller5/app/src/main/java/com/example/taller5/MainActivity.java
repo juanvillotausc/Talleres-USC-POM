@@ -16,6 +16,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,19 +46,67 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnLogin = findViewById(R.id.button);
         Random rd = new Random();
+        String email=inputEmail.getText().toString();
+        String password=inputPassword.getText().toString();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int number = rd.nextInt(500);
-                if (!inputEmail.getText().toString().isEmpty() && !inputPassword.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "¡Logged In!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this, MainActivity2.class));
-                    return;
-                }
+                createUserDB(email,password);
+//                if (!inputEmail.getText().toString().isEmpty() && !inputPassword.getText().toString().isEmpty()) {
+//                    Toast.makeText(MainActivity.this, "¡Logged In!", Toast.LENGTH_SHORT).show();
+//                    startActivity(new Intent(MainActivity.this, MainActivity2.class));
+//                    return;
+//                }
                 Toast.makeText(MainActivity.this, "¡Login Failed!", Toast.LENGTH_SHORT).show();
                 btnLogin.setBackgroundColor(Color.rgb(38, 198, number));
             }
         });
+    }
+
+    public void createUserDB(String email, String password) {
+        try {
+
+            URL obj = new URL("http://localhost:8080/guardar");
+            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+            con.setRequestMethod("POST");
+
+            // For POST only - START
+            con.setDoOutput(true);
+            OutputStream os = con.getOutputStream();
+            os.write(email.getBytes());
+            os.write(password.getBytes());
+            os.flush();
+            os.close();
+            // For POST only - END
+
+            int responseCode = con.getResponseCode();
+            System.out.println("POST Response Code :: " + responseCode);
+
+            if (responseCode == HttpURLConnection.HTTP_OK) { //success
+                BufferedReader in = new BufferedReader(new InputStreamReader(
+                        con.getInputStream()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+
+                // print result
+                System.out.println(response.toString());
+            } else {
+                System.out.println("POST request not worked");
+            }
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
