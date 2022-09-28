@@ -39,14 +39,42 @@
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="128dp"
         android:layout_marginEnd="133dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="5dp"
         android:text="Log in"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="5dp"
+        android:text="Crear Empleado"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="40dp"
+        android:text="Consultar empleado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView3"
