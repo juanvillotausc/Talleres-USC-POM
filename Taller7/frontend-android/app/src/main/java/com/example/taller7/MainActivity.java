@@ -1,4 +1,4 @@
-package com.example.taller5;
+package com.example.taller7;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,10 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.taller5.services.AdminServicios;
-
-
-import java.util.Random;
+import com.example.taller7.services.AdminServicios;
 
 public class MainActivity extends AppCompatActivity {
 
